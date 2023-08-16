@@ -6,14 +6,15 @@ body {
   font-family: "Lato", sans-serif;
   padding: 0;
   margin: 0;
+  background: radial-gradient(#27d789, #ffff);
 }
 
 nav {
-  background-color: whitesmoke;
+  background: linear-gradient(#27d789, #ffff);
   color: white;
-  padding: 20px 50px;
+  padding: 5px 5px;
+  
 }
-
 .navTop {
   display: flex;
   align-items: center;
@@ -382,7 +383,7 @@ label {
 
 .nsItem {
   flex: 1;
-  background-color: black;
+  background: linear-gradient(#27d789, #ffff);
   color: white;
   display: flex;
   flex-direction: column;
@@ -404,6 +405,13 @@ label {
   padding: 15px;
   font-weight: 600;
   cursor: pointer;
+}
+
+.nsButton:hover {
+  padding: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  color: black;
 }
 
 footer {
@@ -468,6 +476,11 @@ footer {
 @media screen and (max-width:480px) {
   nav{
     padding: 20px;
+  }
+
+  .navItem img{
+    display: block;
+      margin: 0 auto;
   }
 
   .search{
@@ -565,6 +578,8 @@ footer {
     padding: 20px;
     width: 90%;
   }
+
+  .footerLeft 
 
   .footerRight{
     padding: 20px;
