@@ -6,76 +6,26 @@ const products = [
     id: 1,
     title: "BAKSO",
     price: 12,
-    colors: [
-      {
-        code: "black",
-        img: "img/Bakso.png",
-      },
-      {
-        code: "darkblue",
-        img: "./img/air2.png",
-      },
-    ],
   },
   {
     id: 2,
     title: "MIE AYAM",
     price: 12,
-    colors: [
-      {
-        code: "lightgray",
-        img: "img/mie_ayam.png",
-      },
-      {
-        code: "green",
-        img: "./img/jordan2.png",
-      },
-    ],
   },
   {
     id: 3,
     title: "MIE AYAM BAKSO",
     price: 14,
-    colors: [
-      {
-        code: "lightgray",
-        img: "img/mie ayam bakso.png",
-      },
-      {
-        code: "green",
-        img: "./img/blazer2.png",
-      },
-    ],
   },
   {
     id: 4,
     title: "BAKSO TELOR",
     price: 14,
-    colors: [
-      {
-        code: "black",
-        img: "img/bakso_telor.png",
-      },
-      {
-        code: "lightgray",
-        img: "./img/crater2.png",
-      },
-    ],
   },
   {
     id: 5,
     title: "ES CAMPUR",
     price: 12,
-    colors: [
-      {
-        code: "gray",
-        img: "img/Es-Campur.png",
-      },
-      {
-        code: "black",
-        img: "./img/hippie2.png",
-      },
-    ],
   },
 ];
 
@@ -97,7 +47,7 @@ menuItems.forEach((item, index) => {
 
     //change texts of currentProduct
     currentProductTitle.textContent = choosenProduct.title;
-    currentProductPrice.textContent = "$" + choosenProduct.price;
+    currentProductPrice.textContent = "Rp." + choosenProduct.price;
     currentProductImg.src = choosenProduct.colors[0].img;
 
     //assing new colors

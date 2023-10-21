@@ -6,46 +6,75 @@ body {
   font-family: "Lato", sans-serif;
   padding: 0;
   margin: 0;
-  background: radial-gradient(#27d789, #ffff);
+  background: #7E3C0F;
 }
 
 nav {
-  background: linear-gradient(#27d789, #ffff);
+  background-color: #642c07;
   color: white;
-  padding: 5px 5px;
-  
+  padding: 20px 50px;
 }
+
 .navTop {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: -2%;
+}
+
+
+
+.navBottom h3:hover {
+  color: #369e62;
 }
 
 .search {
-  display: flex;
-  align-items: center;
-  background-color: gray;
-  padding: 10px 20px;
-  border-radius: 10px;
-  width: 300px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  --size-button: 40px;
+  right: 15%;
 }
 
-.searchInput {
+.input {
+  padding-left: var(--size-button);
+  height: var(--size-button);
+  font-size: 15px;
   border: none;
-  background-color: transparent;
-  width: 90%;
+  color: #fff;
+  outline: none;
+  width: var(--size-button);
+  transition: all ease 0.3s;
+  background-color: #191A1E;
+  box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%), inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
-.searchInput::placeholder {
-  color: lightgray;
+.input:focus,
+.input:not(:invalid) {
+  width: 200px;
+  cursor: text;
+  box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #5f5e5e;
 }
 
-.search img{
-  left: 90%;
+.input:focus+.icon,
+.input:not(:invalid)+.icon {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.search .icon {
   position: absolute;
+  width: var(--size-button);
+  height: var(--size-button);
+  top: 0;
+  left: 0;
+  padding: 5px;
+  pointer-events: none;
+}
+
+.search .icon svg {
+  width: 80%;
+  height: 80%;
 }
 
 .limitedOffer {
@@ -63,7 +92,7 @@ nav {
 .menuItem {
   margin-right: 50px;
   cursor: pointer;
-  color: black;
+  color: lightgray;
   font-weight: 400;
 }
 
@@ -201,6 +230,7 @@ nav {
   font-size: 20px;
   font-weight: 600;
   margin: 20px;
+  color: white;
 }
 
 .featureDesc {
@@ -368,6 +398,11 @@ label {
   display: flex;
 }
 
+.galleryTitle{
+  font-size: 60px;
+  color: white;
+}
+
 .galleryItem {
   flex: 1;
   padding: 50px;
@@ -375,6 +410,12 @@ label {
 
 .galleryImg {
   width: 100%;
+  transition: all .2s ease-in-out;
+}
+
+.galleryImg:hover{
+  border-radius: 0.45em;
+    transform: scale(1.1);
 }
 
 .newSeason {
@@ -383,7 +424,7 @@ label {
 
 .nsItem {
   flex: 1;
-  background: linear-gradient(#27d789, #ffff);
+  background: #642c07;
   color: white;
   display: flex;
   flex-direction: column;
@@ -416,6 +457,7 @@ label {
 
 footer {
   display: flex;
+  background: #642c07;
 }
 
 .footerLeft {
@@ -481,6 +523,7 @@ footer {
   .navItem img{
     display: block;
       margin: 0 auto;
+      top: -40px;
   }
 
   .search{
@@ -559,6 +602,7 @@ footer {
 
   .gallery{
     display: none;
+    width: 10px;
   }
 
   .newSeason{
@@ -569,9 +613,29 @@ footer {
     padding: 50px;
   }
 
+    .maps {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  
+    .maps iframe {
+      width: 100%;
+      height: 450px;
+    }
+
+  .mapsDetails{
+    position: absolute;
+    top: 10%;
+    right: 40px;
+    width: 40%;
+    padding: 50px;
+  }
+  
   footer{
     flex-direction: column;
     align-items: center;
+    
   }
 
   .footerLeft{
@@ -579,7 +643,9 @@ footer {
     width: 90%;
   }
 
-  .footerLeft 
+  .fMenuTitle{
+    color: white;
+  }
 
   .footerRight{
     padding: 20px;
